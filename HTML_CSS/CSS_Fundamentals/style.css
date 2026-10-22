@@ -3,6 +3,15 @@
   padding: 0;
 }
 
+body{
+  background-color: #f7f7f7;
+  font-family: sans-serif;
+
+  border-top: 10px solid #1098ad;
+  position: relative;
+}
+
+
 h1, h2, h3, h4, p, li{
   font-family: sans-serif;
 }
@@ -15,9 +24,20 @@ h1 {
     padding: 20px 0px;
   }
 
+  /*pseudo elements (::)*/
+
+h1::first-letter{
+  font-style: normal;
+  margin-right: 5px;
+}
+
+p::first-line{
+  color: red;
+}
+
 nav{
   font-size: 20px;
-  padding-bottom: 20px;
+  text-align: center;
 }
 
 .container{
@@ -167,11 +187,19 @@ a:active{
   height: auto;
 }
 
-/* nav a:link{
-  background-color: orangered;
-  margin: 20px; /*applied only left and right because 'a' is inline
-
-} */
+button{
+  font-size: 20px;
+  padding: 20px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+nav a:link{
+  /* background-color: orangered; */
+  margin: 20px; /*applied only left and right because 'a' is inline*/
+  
+}
 
 /* Resolving conflicts */
 /*footer will have red color because id has the highest priority*/
