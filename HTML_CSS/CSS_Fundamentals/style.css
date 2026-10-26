@@ -1,10 +1,11 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body{
-  background-color: #f7f7f7;
+  background-color: white;
   font-family: sans-serif;
 
   border-top: 10px solid #1098ad;
@@ -41,7 +42,7 @@ nav{
 }
 
 .container{
-  width: 700px;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -58,8 +59,9 @@ nav{
 aside{
   background-color: #f7f7f7;
   border: 5px solid #1098ad;
-  padding: 50px 0px;
-  width: 500px;
+  padding: 50px 40px;
+  
+  
 }  
 
 h1, h2, h3{
@@ -85,6 +87,7 @@ h4{
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 p{
@@ -132,6 +135,7 @@ li{
 
 .related{
   list-style-type: none;
+  margin-left: 0;
 }
 
 /*  .first-li{
@@ -218,3 +222,47 @@ nav a:link{
 footer p{
   color: purple;
 }*/
+
+/*FLOATS*/
+.author-img{
+  float:left
+}
+
+.author{
+  /* padding-left: 80px; */
+  margin-top: 10px;
+  float: left;
+  margin-left: 20px;
+}
+
+h1{
+  float:left;
+}
+
+nav{
+  float: right;
+}
+
+.clear{
+  clear: both;  /*to remove float property*/
+}
+
+.clearfix::after{
+  clear: both;
+  content: "";
+  display: block;
+}
+
+article{
+  width: 825px;
+  float: left;
+}
+
+aside{
+  width: 300px;
+  float: right;
+}
+
+footer{
+  clear: both;
+}
