@@ -101,7 +101,7 @@ const averageAge = (agePriya + ageSara) / 2;
 console.log(agePriya, ageSara, averageAge);
 */
 
-// STRING & LITERALS
+// STRING('' or "") & TEMPLATE LITERALS(``)
 /*
 const firstName = 'Priya';
 const job = 'teacher';
@@ -126,6 +126,9 @@ console.log('String with \n\
     lines`);
 */
 
+// IF-ELSE
+
+/*
 const age = 19;
 
 if(age >= 18){
@@ -145,3 +148,162 @@ if(birthYear<=200){
 }
 
 console.log(century);
+*/
+
+//TYPE CONVERSION
+
+/*
+const inputYear = '1991';
+console.log(Number(inputYear) + 18); //1991 + 18
+console.log(inputYear+18); //199118
+
+console.log(Number('Priya')); //Nan
+console.log(typeof NaN);  //number
+console.log(String(23), 23); //23 23
+*/
+
+//TYPE COERCION - when we have two different data types then 
+
+/*
+// javascript will convert one datatype to another
+// '+' will convert number to string
+
+console.log('I am ' + 23 + 'years old'); //number is converted to string
+
+//'-' will convert string to number
+console.log('23' - '10' - 3); //23-10-3 = 10
+console.log('23' + '10' + 3);  //23103
+console.log('23' * '2'); //converted to number - 46
+console.log('23' / '2'); //11.5
+
+let n = '1' + 1; // '+' so number to string // '11'
+n = n - 1;  //'-' so string to number // '11' to 11 //11 - 1 = 10
+console.log(n); //10
+ */
+
+//TRULY AND FALSY VALUES
+
+//5 Falsy VALUES -> 0, '', undefined, null, Nan
+
+/*
+console.log(Boolean(0));  //false
+console.log(Boolean(undefined)); // false
+console.log(Boolean('Priya')); //true
+console.log(Boolean({})); //true
+console.log(Boolean('')); //false*/
+
+// const money = 0;
+// if(money){ // if(0) therefore execute false statement
+//   console.log('Dont spend it at all');
+// } else{
+//   console.log('You should get a job') //output
+// }
+
+/*
+const money = 100;
+if(money){ // if(100) therefore execute true statement
+  console.log('Dont spend it at all'); //output
+} else{
+  console.log('You should get a job') 
+}
+
+let height; //height is undefined therefore false value
+if(height){ //falsy value
+  console.log('YAY! Height is defined');
+} else{
+  console.log('Height is undefined'); //output
+}
+  */
+
+//== and ===
+// === very strict
+// == does type coercion, less strict
+
+// const age = 18;
+// if(age === 18) console.log("You are adult (strict)");
+/*
+const age1 = '18';
+if(age1 === 18) console.log("You are adult (strict)");
+if(age1 == 18) console.log("You are adult (loose)");
+
+const fav = Number(prompt("Whats your favouite number?"));
+console.log(fav);
+console.log(typeof fav); //number
+
+if(fav === 7){  //7 === 7 -> true
+  console.log('7 is an amazing number');
+} else if(fav === 23){
+  console.log('23 is also an amazing number');
+} else{
+  console.log('Number is not 23 or 7');
+}
+
+// !== and != 
+if (fav !== 23) console.log('Why not 23');
+*/
+
+//BOOLEAN OPERATOR - AND, OR and NOT
+/*
+const hasDriversLicense = true; //A
+const hasGoodVision = false; //B
+
+console.log(hasDriversLicense && hasGoodVision); //false
+console.log(hasDriversLicense || hasGoodVision); //true
+console.log(!hasDriversLicense); //false
+
+if(hasDriversLicense && hasGoodVision){
+  console.log('Sara can drive');
+}else{
+  console.log('Someone else can drive');
+}
+
+const isTired = true; //C
+console.log(hasDriversLicense || hasGoodVision || isTired);
+console.log(hasDriversLicense && hasGoodVision && isTired);
+*/
+
+//SWITCH statement
+/*
+const day = 'monday';
+
+switch(day){
+  case 'monday': //day === monday
+    console.log('Plan course structure');
+    console.log('Go to coding meetup');
+    break;
+
+  case 'tuesday':
+    console.log('Prepare theory videos');
+    break;
+
+  case 'wednesday':
+  case 'thursday':
+    console.log('Write coding examples');
+    break;
+
+  case 'friday':
+    console.log('Record videos');
+    break;
+
+  case 'saturday':
+  case 'sunday':
+    console.log('Enjoy the weekend');
+    break;
+  
+  default:
+    console.log('Not a valid day');
+}
+    */
+
+// 3 + 4
+// 1991
+// true && false && !false
+
+//Ternary operator
+
+const age = 23;
+age >= 18 ? console.log('I like to drink wine') : 
+  console.log('I link to drink water');
+
+const drink = age >= 18 ? 'drink wine' : 'drink water';
+console.log(drink);
