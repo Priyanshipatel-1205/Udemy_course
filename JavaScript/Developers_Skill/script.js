@@ -18,7 +18,7 @@ const temp = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 // Find max value in temp array
 // Find min value in temp array
 // Substract min from max (amplitude) and return it
-
+/*
 const calcTemAmplitude = function(temps){
   let max = temps[0];
   let min = temps[0];
@@ -65,3 +65,16 @@ const calcTemAmplitudeNew = function(t1, t2){
 
 const amplitudeNew = calcTemAmplitudeNew([2,9,4], [3, 5, 1]);
 console.log(amplitudeNew);
+*/
+
+const measureKelvin = function(){
+  const measurement = {
+    type: 'temp',
+    unit: 'celcius',
+    value: prompt('Degrees celsius')
+  }
+
+  const kelvin = measurement.value + 273;
+  return kelvin;
+}
+console.log(measureKelvin());
