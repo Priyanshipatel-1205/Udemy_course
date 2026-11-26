@@ -66,15 +66,37 @@ const calcTemAmplitudeNew = function(t1, t2){
 const amplitudeNew = calcTemAmplitudeNew([2,9,4], [3, 5, 1]);
 console.log(amplitudeNew);
 */
-
+/*
 const measureKelvin = function(){
   const measurement = {
     type: 'temp',
     unit: 'celcius',
-    value: prompt('Degrees celsius')
+    //C. FIX
+    value: Number(prompt('Degrees celsius')) //prompt always returns string
   }
+
+  //B. FIND
+  console.table(measurement);
+
+  //console.log(measurement.value);
+  //console.warn(measurement.value);
+  //console.error(measurement.value);
 
   const kelvin = measurement.value + 273;
   return kelvin;
 }
+//A. IDENTIFY
 console.log(measureKelvin());
+*/
+
+//CHALLENGE - 1
+
+const printForecast = function(arr){
+  let str='';
+  for(let i = 0; i < arr.length; i++){
+    str = str + `${arr[i]}deg C in ${i+1} days...`;
+  }
+  console.log(str);
+}
+const arr1 = [17,21,23];
+printForecast(arr1);
